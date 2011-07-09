@@ -1,0 +1,33 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  first_name: MyString
+  middle_name: MyString
+  last_name: MyString
+  address: MyString
+  phone_number: MyString
+  email: MyString
+  civil_status: MyString
+  birthday: MyString
+  employment_status: MyString
+  date_hired: 2011-07-09
+  date_regular: 2011-07-09
+  daily_salary: 9.99
+  position_id: 1
+  branch_id: 1
+
+two:
+  first_name: MyString
+  middle_name: MyString
+  last_name: MyString
+  address: MyString
+  phone_number: MyString
+  email: MyString
+  civil_status: MyString
+  birthday: MyString
+  employment_status: MyString
+  date_hired: 2011-07-09
+  date_regular: 2011-07-09
+  daily_salary: 9.99
+  position_id: 1
+  branch_id: 1

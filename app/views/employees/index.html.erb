@@ -1,0 +1,50 @@
+<h1>Listing employees</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Middle name</th>
+    <th>Last name</th>
+    <th>Address</th>
+    <th>Phone number</th>
+    <th>Email</th>
+    <th>Civil status</th>
+    <th>Birthday</th>
+    <th>Employment status</th>
+    <th>Date hired</th>
+    <th>Date regular</th>
+    <th>Daily salary</th>
+    <th>Position</th>
+    <th>Branch</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @employees.each do |employee| %>
+  <tr>
+    <td><%= employee.first_name %></td>
+    <td><%= employee.middle_name %></td>
+    <td><%= employee.last_name %></td>
+    <td><%= employee.address %></td>
+    <td><%= employee.phone_number %></td>
+    <td><%= employee.email %></td>
+    <td><%= employee.civil_status %></td>
+    <td><%= employee.birthday %></td>
+    <td><%= employee.employment_status %></td>
+    <td><%= employee.date_hired %></td>
+    <td><%= employee.date_regular %></td>
+    <td><%= employee.daily_salary %></td>
+    <td><%= employee.position.name %></td>
+    <td><%= employee.company_branch.name %></td>
+    <td><%= link_to 'Show', employee %></td>
+    <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+    <td><%= link_to 'Destroy', employee, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Employee', new_employee_path %>
+

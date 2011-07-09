@@ -1,0 +1,76 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @employee.first_name %>
+</p>
+
+<p>
+  <b>Middle name:</b>
+  <%= @employee.middle_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @employee.last_name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @employee.address %>
+</p>
+
+<p>
+  <b>Phone number:</b>
+  <%= @employee.phone_number %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @employee.email %>
+</p>
+
+<p>
+  <b>Civil status:</b>
+  <%= @employee.civil_status %>
+</p>
+
+<p>
+  <b>Birthday:</b>
+  <%= @employee.birthday %>
+</p>
+
+<p>
+  <b>Employment status:</b>
+  <%= @employee.employment_status %>
+</p>
+
+<p>
+  <b>Date hired:</b>
+  <%= @employee.date_hired %>
+</p>
+
+<p>
+  <b>Date regular:</b>
+  <%= @employee.date_regular %>
+</p>
+
+<p>
+  <b>Daily salary:</b>
+  <%= @employee.daily_salary %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @employee.position.name %>
+</p>
+
+<p>
+  <b>Branch:</b>
+  <%= @employee.company_branch.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_employee_path(@employee) %> |
+<%= link_to 'Back', employees_path %>
+

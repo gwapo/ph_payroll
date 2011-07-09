@@ -1,4 +1,6 @@
 PhPayroll::Application.routes.draw do
+  resources :employees
+
   resources :company_branches
 
   resources :positions

@@ -1,0 +1,85 @@
+<%= form_for(@employee) do |f| %>
+  <% if @employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+      <% @employee.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :employee_number %><br />
+    <%= f.text_field :employee_number %>
+  </div>
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :middle_name %><br />
+    <%= f.text_field :middle_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :gender , 'Male'%>
+    <%= f.radio_button 'gender', 'male' %>
+    <%= f.label :gender , 'Female'%>
+    <%= f.radio_button 'gender', 'female' %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :civil_status %><br />
+    <%= f.select :civil_status, %w{ single married } %>
+  </div>
+  <div class="field">
+    <%= f.label :birthday %><br />
+    <%= f.date_select :birthday,  :start_year => 1995 %>
+  </div>
+  <div class="field">
+    <%= f.label :employment_status %><br />
+    <%= f.select :employment_status, %w{ regular contractual } %>
+  </div>
+  <div class="field">
+    <%= f.label :date_hired %><br />
+    <%= f.date_select :date_hired %>
+  </div>
+  <div class="field">
+    <%= f.label :date_regular %><br />
+    <%= f.date_select :date_regular %>
+  </div>
+  <div class="field">
+    <%= f.label :daily_salary %><br />
+    <%= f.text_field :daily_salary %>
+  </div>
+  <div class="field">
+    <%= f.label :company_branch_id %><br />
+     <%= f.select :company_branch_id, @branches.map { |s| [s.name, s.id] },
+                              :selected => @employee.company_branch_id   %>
+  </div>
+  <div class="field">
+    <%= f.label :position_id %><br />
+    <%= f.select :position_id, @positions.map { |s| [s.name, s.id] },
+                              :selected => @employee.position_id   %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
