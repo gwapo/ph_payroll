@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @company_branch.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @company_branch.address %>
+</p>
+
+<p>
+  <b>Phone number:</b>
+  <%= @company_branch.phone_number %>
+</p>
+
+<p>
+  <b>Descriptions:</b>
+  <%= @company_branch.descriptions %>
+</p>
+
+
+<%= link_to 'Edit', edit_company_branch_path(@company_branch) %> |
+<%= link_to 'Back', company_branches_path %>
